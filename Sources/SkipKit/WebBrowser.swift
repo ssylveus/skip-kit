@@ -20,6 +20,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 #endif
 
+
+
+#if SKIP
+// Extension to provide the missing toAndroidUri method expected by skip-kit
+extension URL {
+    /// Converts a Swift URL to an Android Uri
+    public func toAndroidUri() -> android.net.Uri {
+        return android.net.Uri.parse(self.absoluteString)
+    }
+}
+#endif
+
+
+
 // MARK: - Cross-Platform Types
 
 /// A custom action that can be performed on a web page.

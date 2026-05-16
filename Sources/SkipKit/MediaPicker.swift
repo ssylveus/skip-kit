@@ -83,7 +83,8 @@ extension View {
             #endif
             #else
             // SKIP INSERT:
-            // var imageURLString by rememberSaveable { mutableStateOf<String?>(null) }
+            var imageURLString: String? = nil // Swift mutable variable (replaced by SKIP INSERT above for Kotlin state)
+
 
             // alternatively, we could use TakePicturePreview, which returns a Bitmap
             let takePictureLauncher = rememberLauncherForActivityResult(contract: ActivityResultContracts.TakePicture()) { success in

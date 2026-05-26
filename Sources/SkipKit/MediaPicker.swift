@@ -91,8 +91,8 @@ extension View {
                 // uri e.g.: content://media/picker/0/com.android.providers.media.photopicker/media/1000000025
                 isPresented.wrappedValue = false // clear the presented bit
                 logger.log("takePictureLauncher: success: \(success) from \(imageURLString)")
-                if success == true, let imageURLString {
-                    selectedImageURL.wrappedValue = URL(string: imageURLString)
+                if success == true, let imageURL = imageURLString {
+                    selectedImageURL.wrappedValue = URL(string: imageURL)
                 }
             }
 
